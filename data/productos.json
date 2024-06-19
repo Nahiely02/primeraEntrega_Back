@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Camiseta de algodón",
+    "description": "Camiseta cómoda y ligera de algodón",
+    "code": "TS001",
+    "price": 10000,
+    "status": true,
+    "stock": 50,
+    "category": "Ropa",
+    "thumbnails": [
+      "https://pixabay.com/es/illustrations/ai-generado-camisa-8751040/",
+      "https://pixabay.com/es/illustrations/ai-generado-camisa-8751039/"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Camiseta de algodón",
+    "description": "Camiseta negra",
+    "code": "TS002",
+    "price": 10000,
+    "status": true,
+    "stock": 20,
+    "category": "Camiseta",
+    "thumbnails": [
+      "https://www.pexels.com/es-es/foto/moda-persona-modelo-maqueta-4066292/",
+      "https://www.pexels.com/es-es/foto/moda-persona-modelo-maqueta-4066293/"
+    ]
+  }
+]

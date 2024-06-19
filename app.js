@@ -1,16 +1,25 @@
 const express = require('express');
+const productsRouter = require('./routes/products');
+const cartsRouter = require('./routes/carts');
+const fs = require('fs');
+
 const app = express();
-const bodyParser = require('body-parser');
 
-const productRouter = require('./product');
-const cartRouter = require('./cart');
+// Middleware para parsear el cuerpo de las solicitudes JSON
+app.use(express.json());
 
-app.use(bodyParser.json());
-
-app.use('/api/products', productRouter);
-app.use('/api/carts', cartRouter);
+// Rutas para los endpoints de productos y carritos
+app.use('/api/products', productsRouter);
+app.use('/api/carts', cartsRouter);
 
 const PORT = process.env.PORT || 3000;
+
+// Middleware de manejo de errores global
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Something went wrong!' });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
